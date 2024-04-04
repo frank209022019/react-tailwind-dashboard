@@ -12,10 +12,10 @@ const SidebarTitle = () => {
       {isSidebarOpen && (
         <motion.span
           key="tailwind-text"
-          className="text-white font-xl"
+          className="text-white text-xl ms-2"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}>
+          exit={{ opacity: 0, x: -20 }}>
           Tailwind
         </motion.span>
       )}

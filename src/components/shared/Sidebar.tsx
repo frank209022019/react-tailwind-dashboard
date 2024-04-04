@@ -17,15 +17,15 @@ const Sidebar = () => {
         className="bg-gray-800 flex flex-col justify-between h-screen shrink-0"
         initial={{ width: 0 }}
         animate={{ width: isSidebarOpen ? 200 : 60 }}
-        transition={{ type: 'spring', stiffness: 100 }}>
-        <div className="flex ps-4 pt-4 pe-4 pb-3 mt-1">
+        transition={{ type: 'spring', stiffness: 100, duration: 0.5 }}>
+        <div className="flex ps-3 py-3 pe-3 mt-1">
           {/* Logo */}
           <SidebarLogo />
           {/* Title */}
           <SidebarTitle />
         </div>
         {/* Top Routes */}
-        <div className="p-4 text-white">
+        <div className="p-3 text-white">
           {isSidebarOpen ? (
             <div className="flex flex-col items-start space-y-2">
               {SidebarRoutesArray.TopRoutes.map((route) => (
@@ -70,7 +70,7 @@ const Sidebar = () => {
           )}
         </div>
         {/* Bottom Routes */}
-        <div className="mt-auto p-4 text-white">
+        <div className="mt-auto p-3 text-white">
           <hr className={`mb-3 ${isSidebarOpen ? 'w-full' : 'w-0'}`} />
           {isSidebarOpen ? (
             <div className="flex flex-col items-start space-y-2">

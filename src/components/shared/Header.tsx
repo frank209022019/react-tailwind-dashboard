@@ -6,7 +6,7 @@ const Header = () => {
   const { isSidebarOpen } = useSidebar();
 
   return (
-    <div className={`bg-gray-800 p-4 text-white ${isSidebarOpen ? '' : 'w-full'}`}>
+    <div className={`bg-gray-800 p-3 text-white ${isSidebarOpen ? '' : 'w-full'}`}>
       Header Items
     </div>
   );
