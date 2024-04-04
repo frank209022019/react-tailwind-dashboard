@@ -1,27 +1,27 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import logo from './logo.svg';
+import Login from './pages/public/Login';
+import Dashboard from './pages/restricted/Dashboard';
+import Products from './pages/restricted/Products';
+import Layout from './pages/restricted/shared/Layout';
 
 import './App.scss';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Restricted */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="products" index element={<Products />} />
+        </Route>
+        {/* Public */}
+        <Route path="login" element={<Login />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
