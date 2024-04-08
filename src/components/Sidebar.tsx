@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { useSidebar } from '../context/SidebarContext';
-import SidebarRoutesArray from '../pages/restricted/shared/SidebarRoutesArray';
+import SidebarRoutesArray from '../helpers/SidebarRoutes.Array';
 import SidebarLogo from './Sidebar.Logo';
 import SidebarTitle from './Sidebar.Title';
 
@@ -25,7 +25,7 @@ const Sidebar = () => {
           <SidebarTitle />
         </div>
         {/* Top Routes */}
-        <div className="p-3 text-white">
+        <div className="p-3 mb-auto text-white">
           {isSidebarOpen ? (
             <div className="flex flex-col items-start space-y-2">
               {SidebarRoutesArray.TopRoutes.map((route) => (
@@ -70,7 +70,7 @@ const Sidebar = () => {
           )}
         </div>
         {/* Bottom Routes */}
-        <div className="mt-auto p-3 text-white">
+        {/* <div className="mt-auto p-3 text-white">
           <hr className={`mb-3 ${isSidebarOpen ? 'w-full' : 'w-0'}`} />
           {isSidebarOpen ? (
             <div className="flex flex-col items-start space-y-2">
@@ -114,7 +114,7 @@ const Sidebar = () => {
               ))}
             </div>
           )}
-        </div>
+        </div> */}
       </motion.div>
     </>
   );

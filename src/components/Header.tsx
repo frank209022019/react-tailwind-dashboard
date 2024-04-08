@@ -3,6 +3,7 @@ import React from 'react';
 import { HiOutlineChatAlt, HiOutlineMail, HiOutlineSearch } from 'react-icons/hi';
 
 import { useSidebar } from '../context/SidebarContext';
+import HeaderAvatarMenu from './Header.AvatarMenu';
 import HeaderPopover from './Header.Popover';
 
 const Header = () => {
@@ -26,13 +27,14 @@ const Header = () => {
         <HeaderPopover
           icon={<HiOutlineChatAlt />}
           title="Messages"
-          message="This is for messages"
+          message="This panel is for messages"
         />
         <HeaderPopover
           icon={<HiOutlineMail />}
           title="Notifications"
-          message="This is for notifications"
+          message="This panel is for notifications"
         />
+        <HeaderAvatarMenu />
       </div>
     </div>
   );

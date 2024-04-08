@@ -6,6 +6,7 @@ import Customers from './pages/restricted/Customers';
 import Dashboard from './pages/restricted/Dashboard';
 import Orders from './pages/restricted/Orders';
 import Products from './pages/restricted/Products';
+import Profile from './pages/restricted/Profile';
 import Settings from './pages/restricted/Settings';
 import Layout from './pages/restricted/shared/Layout';
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="orders" index element={<Orders />} />
           <Route path="customers" index element={<Customers />} />
           <Route path="settings" index element={<Settings />} />
+          <Route path="profile" index element={<Profile />} />
         </Route>
         {/* Public */}
         <Route path="login" element={<Login />} />
