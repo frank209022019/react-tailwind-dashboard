@@ -2,7 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-import { useSidebar } from '../../context/SidebarContext';
+import { useSidebar } from '../context/SidebarContext';
 
 const SidebarTitle = () => {
   const { isSidebarOpen } = useSidebar();

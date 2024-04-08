@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Tutorial
+
+[React and Tailwind CSS Tutorial for Beginners | Building a dashboard - YouTube](https://www.youtube.com/playlist?list=PLwHsNjmBZ-MJnVNyiaVYHW_dDA5n3mbVk)
+
 ## Available Scripts
 
 In the project directory, you can run:

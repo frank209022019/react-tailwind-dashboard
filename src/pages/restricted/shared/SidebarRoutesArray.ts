@@ -8,7 +8,7 @@ interface IRouteArrayObject {
 const TopRoutes: IRouteArrayObject[] = [
   {
     key: 1,
-    path: '/',
+    path: '/dashboard',
     name: 'Dashboard',
     acronym: 'D'
   },
@@ -17,13 +17,25 @@ const TopRoutes: IRouteArrayObject[] = [
     path: '/products',
     name: 'Products',
     acronym: 'P'
+  },
+  {
+    key: 3,
+    path: '/orders',
+    name: 'Orders',
+    acronym: 'O'
+  },
+  {
+    key: 4,
+    path: '/customers',
+    name: 'Customers',
+    acronym: 'C'
   }
 ];
 
 const BottomRoutes: IRouteArrayObject[] = [
   {
     key: 1,
-    path: '/',
+    path: '/settings',
     name: 'Settings',
     acronym: 'S'
   },

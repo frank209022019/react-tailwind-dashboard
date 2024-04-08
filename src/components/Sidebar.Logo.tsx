@@ -2,7 +2,7 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
-import { useSidebar } from '../../context/SidebarContext';
+import { useSidebar } from '../context/SidebarContext';
 
 interface ILogo {
   height?: string;
@@ -24,7 +24,7 @@ const SidebarLogo = ({ width = '24px', height = '24px', color = 'white' }: ILogo
         height={height}
         onClick={toggleSidebar}
         key="tailwind-header-logo"
-        className="text-white font-xl"
+        className="text-white font-xl focus:outline-none active:outline-none"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 
-import { useSidebar } from '../../context/SidebarContext';
-import SidebarRoutesArray from '../../pages/restricted/shared/SidebarRoutesArray';
+import { useSidebar } from '../context/SidebarContext';
+import SidebarRoutesArray from '../pages/restricted/shared/SidebarRoutesArray';
 import SidebarLogo from './Sidebar.Logo';
 import SidebarTitle from './Sidebar.Title';
 
@@ -14,9 +14,9 @@ const Sidebar = () => {
   return (
     <>
       <motion.div
-        className="bg-gray-800 flex flex-col justify-between h-screen shrink-0"
+        className="bg-gray-700 flex flex-col justify-between h-screen shrink-0"
         initial={{ width: 0 }}
-        animate={{ width: isSidebarOpen ? 200 : 60 }}
+        animate={{ width: isSidebarOpen ? 170 : 50 }}
         transition={{ type: 'spring', stiffness: 100, duration: 0.5 }}>
         <div className="flex ps-3 py-3 pe-3 mt-1">
           {/* Logo */}
@@ -32,8 +32,8 @@ const Sidebar = () => {
                 <>
                   <motion.div
                     whileHover={{
-                      scale: 1.1,
-                      transition: { duration: 0.3 }
+                      scale: 1.05,
+                      transition: { duration: 0.2 }
                     }}
                     whileTap={{ scale: 0.9 }}>
                     <Link key={route.key} to={route.path} className="flex">
@@ -41,7 +41,7 @@ const Sidebar = () => {
                         className={`size-6 bg-white rounded text-black font-semibold text-center`}>
                         {route.acronym}
                       </div>
-                      <span className="text-white ms-2">{route.name}</span>
+                      <span className="text-sm text-white ms-2">{route.name}</span>
                     </Link>
                   </motion.div>
                 </>
@@ -78,8 +78,8 @@ const Sidebar = () => {
                 <>
                   <motion.div
                     whileHover={{
-                      scale: 1.1,
-                      transition: { duration: 0.3 }
+                      scale: 1.05,
+                      transition: { duration: 0.2 }
                     }}
                     whileTap={{ scale: 0.9 }}>
                     <Link key={route.key} to={route.path} className="flex">
@@ -87,7 +87,7 @@ const Sidebar = () => {
                         className={`size-6 bg-white rounded text-black font-semibold text-center`}>
                         {route.acronym}
                       </div>
-                      <span className="text-white ms-2">{route.name}</span>
+                      <span className="text-sm text-white ms-2">{route.name}</span>
                     </Link>
                   </motion.div>
                 </>

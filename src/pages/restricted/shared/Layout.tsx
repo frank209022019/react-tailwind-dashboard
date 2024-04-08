@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import Header from '../../../components/shared/Header';
-import Sidebar from '../../../components/shared/Sidebar';
+import Header from '../../../components/Header';
+import Sidebar from '../../../components/Sidebar';
 import { useSidebar } from '../../../context/SidebarContext';
 
 const Layout = () => {
@@ -10,13 +10,10 @@ const Layout = () => {
 
   return (
     <div className="flex h-screen">
-      {/* Sidebar */}
       <Sidebar />
       <div className={`flex flex-col flex-1 ${isSidebarOpen ? '' : 'w-full'}`}>
-        {/* Header */}
         <Header />
-        {/* Main Content */}
-        <div className="flex-1 overflow-y-auto p-3">
+        <div className="flex-1 overflow-y-auto p-3 bg-gray-200">
           <Outlet />
         </div>
       </div>
