@@ -1,16 +1,21 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
-import { HiOutlineChatAlt } from 'react-icons/hi';
 
+import DashboardStatsGridArray from '../helpers/Dashboard.StatsGrid.Array';
 import DashboardStatsGridItem from './Dashboard.StatsGrid.Item';
 
 const DashboardStatsGrid = () => {
   return (
     <div className="flex gap-4 w-full">
-      <DashboardStatsGridItem key={1} title={'1'} icon={<HiOutlineChatAlt />} />
-      <DashboardStatsGridItem key={2} title={'2'} icon={<HiOutlineChatAlt />} />
-      <DashboardStatsGridItem key={3} title={'3'} icon={<HiOutlineChatAlt />} />
-      <DashboardStatsGridItem key={4} title={'4'} icon={<HiOutlineChatAlt />} />
+      {DashboardStatsGridArray.StatGridItems.map((item) => (
+        <DashboardStatsGridItem
+          key={item.key}
+          title={item.title}
+          icon={item.icon}
+          value={item.value}
+          minorValue={item.minorValue}
+        />
+      ))}
     </div>
   );
 };
