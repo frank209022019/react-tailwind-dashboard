@@ -41,8 +41,8 @@ const BottomRoutes: IRouteArrayObject[] = [
   },
   {
     key: 2,
-    path: '/help-support',
-    name: 'Help & Support',
+    path: '/help',
+    name: 'Help',
     acronym: 'H'
   },
   {

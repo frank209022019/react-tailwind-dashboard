@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HelpAndSupport = () => {
-  return <div>This is help & support</div>;
+  return <div>This is help</div>;
 };
 
 export default HelpAndSupport;

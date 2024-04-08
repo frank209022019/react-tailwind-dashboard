@@ -26,7 +26,7 @@ const AppRoutes = () => {
         <Route path="customers" element={<Customers />} />
         <Route path="settings" element={<Settings />} />
         <Route path="profile" element={<Profile />} />
-        <Route path="help-support" element={<HelpAndSupport />} />
+        <Route path="help" element={<HelpAndSupport />} />
       </Route>
 
       {/* Public Routes */}

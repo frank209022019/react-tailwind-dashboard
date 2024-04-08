@@ -5,13 +5,12 @@ import { Popover, Transition } from '@headlessui/react';
 import classNames from 'classnames';
 
 interface IPopover {
-  icon: JSX.Element;
+  icon: string;
   title: string;
   message: string;
-  iconSize?: number;
 }
 
-const HeaderPopover = ({ icon, title, message, iconSize = 22 }: IPopover) => {
+const HeaderPopover = ({ icon, title, message }: IPopover) => {
   return (
     <>
       <Popover className="relative">
@@ -22,7 +21,7 @@ const HeaderPopover = ({ icon, title, message, iconSize = 22 }: IPopover) => {
                 open && 'bg-gray-200',
                 'p-1.5 rounded inline-flex items-center text-gray-600 hover:text-opacity-100 focus:outline-none'
               )}>
-              {React.cloneElement(icon, { size: iconSize })}
+              <span className="material-symbols-outlined">{icon}</span>
             </Popover.Button>
             <Transition
               as={Fragment}
@@ -32,7 +31,7 @@ const HeaderPopover = ({ icon, title, message, iconSize = 22 }: IPopover) => {
               leave="transition ease-in duration-150"
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1">
-              <Popover.Panel className="absolute right-0 z-10 mt-2.5 w-60">
+              <Popover.Panel className="absolute right-0 z-10 mt-2 w-48">
                 <div className="bg-white rounded-sm shadow-md ring-1 ring-black ring-opacity-5 px-2 py-2.5">
                   <strong className="text-gray-700 font-md">{title}</strong>
                   <hr />
