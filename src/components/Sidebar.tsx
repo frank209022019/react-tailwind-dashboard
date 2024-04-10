@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import { useSidebar } from '../context/SidebarContext';
-import SidebarRoutesArray from '../helpers/SidebarRoutes.Array';
+import SidebarRoutesArray from '../helpers/Sidebar.Routes';
 import SidebarLogo from './Sidebar.Logo';
 import SidebarTitle from './Sidebar.Title';
 

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 import classNames from 'classnames';
 
-import HeaderAvatarMenuArray from '../helpers/HeaderAvatarMenu.Array';
+import HeaderAvatarMenuArray from '../helpers/Header.AvatarMenu';
 
 const HeaderAvatarMenu = () => {
   const navigate = useNavigate();

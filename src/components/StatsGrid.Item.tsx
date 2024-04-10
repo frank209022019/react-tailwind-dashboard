@@ -2,7 +2,7 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-export interface IDashboardStatsGridItem {
+export interface IStatsGridItem {
   key: number;
   title: string;
   icon: string;
@@ -10,7 +10,7 @@ export interface IDashboardStatsGridItem {
   minorValue: number;
 }
 
-const DashboardStatsGridItem = ({ title, icon, value, minorValue }: IDashboardStatsGridItem) => {
+const StatsGridItem = ({ title, icon, value, minorValue }: IStatsGridItem) => {
   return (
     <div className="bg-white rounded p-2 border border-gray-700 flex items-center w-full shadow-md">
       <div className="rounded-full size-10 flex items-center justify-center ml-1 bg-gray-700">
@@ -36,4 +36,4 @@ const DashboardStatsGridItem = ({ title, icon, value, minorValue }: IDashboardSt
   );
 };
 
-export default DashboardStatsGridItem;
+export default StatsGridItem;

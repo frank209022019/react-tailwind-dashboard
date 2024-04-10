@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
 
-import DashboardStatsGridArray from '../helpers/Dashboard.StatsGrid.Array';
-import DashboardStatsGridItem from './Dashboard.StatsGrid.Item';
+import DashboardStatsGrid from '../helpers/Dashboard.StatsGrid';
+import StatsGridItem from './StatsGrid.Item';
 
-const DashboardStatsGrid = () => {
+const StatsGrid = () => {
   return (
     <div className="flex gap-4 w-full">
-      {DashboardStatsGridArray.StatGridItems.map((item) => (
-        <DashboardStatsGridItem
+      {DashboardStatsGrid.Data.map((item) => (
+        <StatsGridItem
           key={item.key}
           title={item.title}
           icon={item.icon}
@@ -20,4 +20,4 @@ const DashboardStatsGrid = () => {
   );
 };
 
-export default DashboardStatsGrid;
+export default StatsGrid;
